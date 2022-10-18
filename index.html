@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Youtube</title>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                backgroundColor: '#f9f9f9',
+                borderColor: '#ccc',
+                darkgrey: '#E7E9EB',
+                myRed: '#E21717',
+                hcolor: 'f9f9f9',
+                
+              }
+            }
+          }
+        }
+      </script>
+      <style>
+        *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        .playlist-img{
+          width: 170px;
+          height: 100px;
+        }
+    
+      </style>
+</head>
+<body class="bg-backgroundColor">
+    <!-- header section -->
+    <header class="text-gray-600 body-font bg-backgroundColor target-1">
+        <div class=" mx-auto flex flex-wrap px-1 md:px-5 pt-2  md:flex-row items-center justify-between">
+          <a class="flex flex-row items-center title-font font-medium items-center text-gray-900 md:mb-4 md:mb-0">
+            <img class="w-4 md:w-6 mr-4 cursor-pointer sidebar-icon" onclick="showSidebar()" src="resources/icons8-menu-rounded-50.png" alt="">
+            <img class="w-12 md:w-24" src="resources/youtubeLogo.png" alt="">
+          </a>
+          <div class="input-div flex flex-row items-center">
+            <input class="w-24 md:w-96 h-6 md:h-9 border border-solid border-borderColor pl-2" type="text" placeholder="Search">
+            <img class="w-6 md:w-8 h-6 md:h-9 border border-solid border-borderColor cursor-pointer p-2" src="resources/icons8-search-50.png" alt="">
+            <img class="ml-4 w-6 h-6 cursor-pointer" src="resources/icons8-microphone-24.png" alt="">
+          
+          </div>
+          
+          <div class="flex flex-row items-center">
+            <img class="w-4 md:w-6 h-4 md:h-6 mr-4 cursor-pointer" src="resources/videoIcon.png" alt="">
+            <img class="w-4 md:w-6 h-4 md:h-6 mr-4 cursor-pointer" src="resources/bellIcon.png" alt="">
+            <img class="w-4 md:w-6 h-4 md:h-6 cursor-pointer" src="resources/icons8-male-user-50.png" alt="">
+          </div>
+        </div>
+      </header>
+      <!-- side bar section -->
+      <div class="hidden w-60  absolute left-0 top-3  side-bar bg-white z-10">
+        <div class="flex flex-row items-center pl-4">
+          <img class="w-4 md:w-6 mr-4 cursor-pointer" onclick="showSidebar()" src="resources/icons8-menu-rounded-50.png" alt="">
+          <img class="w-12 md:w-24" src="resources/youtubeLogo.png" alt="">
+        </div>
+        <!-- Group 1 -->
+        <div class="flex flex-col  pl-4 pb-4">
+           <!-- home -->
+        <div class="flex flex-row mt-8 cursor-pointer hover:bg-darkgrey py-2">
+          <img src="resources/homeIcon.png" alt="">
+          <h1 class="ml-4">Home</h1>
+        </div>
+        <!-- explore -->
+        <div class="flex flex-row mt-2 cursor-pointer hover:bg-darkgrey py-2">
+          <img src="resources/exploreIcon.png" alt="">
+          <h1 class="ml-4">Explore</h1>
+        </div>
+        <!-- shorts -->
+        <div class="flex flex-row mt-2 cursor-pointer hover:bg-darkgrey py-2">
+          <img src="resources/shortsIcon.png" alt="">
+          <h1 class="ml-4">Shorts</h1>
+        </div>
+        <!-- subscrption -->
+        <div class="flex flex-row mt-2 cursor-pointer hover:bg-darkgrey py-2">
+          <img src="resources/subscrptionIcon.png" alt="">
+          <h1 class="ml-4">Subscriptions</h1>
+        </div>
+        </div>
+        <!-- Group 2 -->
+        <div class="flex flex-col  pl-4 border-2 border-solid border-t border-b border-darkgrey pb-4">
+           <!-- library -->
+        <div class="flex flex-row mt-2 cursor-pointer hover:bg-darkgrey py-2">
+          <img src="resources/libraryIcon.png" alt="">
+          <h1 class="ml-4">Library</h1>
+        </div>
+        <!-- history -->
+        <div class="flex flex-row mt-2 cursor-pointer hover:bg-darkgrey py-2">
+          <img src="resources/historyIcon.png" alt="">
+          <h1 class="ml-4">History</h1>
+        </div>
+        <!-- your videos -->
+        <div class="flex flex-row mt-2 cursor-pointer hover:bg-darkgrey py-2">
+          <img src="resources/yourvideosIcon.png" alt="">
+          <h1 class="ml-4">Your Videos</h1>
+        </div>
+        <!-- watch later -->
+        <div class="flex flex-row mt-2 cursor-pointer hover:bg-darkgrey py-2">
+          <img src="resources/watchlaterIcon.png" alt="">
+          <h1 class="ml-4">Watch Later</h1>
+        </div>
+        </div>
+       <!-- Group-3 Expolre -->
+       <div class="flex flex-col  pl-4 border-2 border-solid  border-b border-darkgrey pb-4 pt-4">
+        <h1>Explore</h1>
+        <!-- Movies -->
+        <div class="flex flex-row mt-2 cursor-pointer hover:bg-darkgrey py-2">
+          <img src="resources/moviesIcon.png" alt="">
+          <h1 class="ml-4">Movies</h1>
+        </div>
+        <!-- Gaming -->
+        <div class="flex flex-row mt-2 cursor-pointer hover:bg-darkgrey py-2">
+          <img src="resources/gamingIcon.png" alt="">
+          <h1 class="ml-4">Gaming</h1>
+        </div>
+        <!-- Live -->
+        <div class="flex flex-row mt-2 cursor-pointer hover:bg-darkgrey py-2">
+          <img src="resources/liveIcon.png" alt="">
+          <h1 class="ml-4">Live</h1>
+        </div>
+        <!-- Fashion & Beauty -->
+        <div class="flex flex-row mt-2 cursor-pointer hover:bg-darkgrey py-2">
+          <img src="resources/fashionIcon.png" alt="">
+          <h1 class="ml-4">fashion & Beauty</h1>
+        </div>
+        <!-- Learning -->
+        <div class="flex flex-row mt-2 cursor-pointer hover:bg-darkgrey py-2">
+          <img src="resources/studyIcon.png" alt="">
+          <h1 class="ml-4">Learning</h1>
+        </div>
+        <!-- Sports -->
+        <div class="flex flex-row mt-2 cursor-pointer hover:bg-darkgrey py-2">
+          <img src="resources/sportsIcon.png" alt="">
+          <h1 class="ml-4">Sports</h1>
+        </div>
+       </div>
+       <!-- Group 4 settings -->
+       <div class="flex flex-col  pl-4 border-2 border-solid  border-b border-darkgrey pb-4 pt-4">
+        <!-- settings -->
+        <div class="flex flex-row mt-2 cursor-pointer hover:bg-darkgrey py-2">
+          <img src="resources/settingIcon.png" alt="">
+          <h1 class="ml-4">Settings</h1>
+        </div>
+        <!-- Report History -->
+        <div class="flex flex-row mt-2 cursor-pointer hover:bg-darkgrey py-2">
+          <img src="resources/historyIcon.png" alt="">
+          <h1 class="ml-4">Report History</h1>
+        </div>
+        <!-- Help -->
+        <div class="flex flex-row mt-2 cursor-pointer hover:bg-darkgrey py-2">
+          <img src="resources/helpIcon.png" alt="">
+          <h1 class="ml-4">Help</h1>
+        </div>
+        <!-- Send Feedback -->
+        <div class="flex flex-row mt-2 cursor-pointer hover:bg-darkgrey py-2">
+          <img src="resources/feedbackIcon.png" alt="">
+          <h1 class="ml-4">Send Feedback</h1>
+        </div>
+       </div>
+       
+      </div>
+      <!-- hero section -->
+      <!-- hero container -->
+      <div class="flex flex-col md:flex-row mt-8  justify-between target-2">
+        <!-- video player section -->
+        <div class="pl-4 md:pl-14 mb-4">
+          <video class="video-player" controls controlsList=”nodownload”  width="720" height="480" poster=""> 
+             </video>
+
+             
+
+            <h1 class="mt-4 md:text-2xl text-black video-title">Big Buck Bunny</h1>
+            <!-- like dislike channel details -->
+            <div class="mt-4 flex flex-row items-center justify-between">
+              <div class="flex flex-row">
+                <div class="flex flex-row items-center">
+                  <img class="w-12 cursor-pointer" src="resources/icons8-rabbit-64.png" alt="">
+                  <div class="ml-4">
+                    <h1 class="flex flex-row items-center cursor-pointer text-xs md:text-lg">Creaters Club <img class="w-4 h-4 ml-2 rounded-lg" src="resources/icons8-tick-24.png" alt=""></h1>
+                    <p class="text-xs md:text-lg">142K subscribers</p>
+                  </div>
+                </div>
+                <!-- subscibe and bell -->
+                <div class="flex flex-row items-center ml-8 " >
+                  <div class="bg-myRed px-3 py-1 rounded-3xl cursor-pointer subscibe-div" onclick="subscribe()"><h2 class="subscibe-text text-white text-xs md:text-lg">Subscribe</h2></div>
+                  <img class="w-6 h-6 ml-2 cursor-pointer" src="resources/bellIcon.png" alt="">
+                </div>
+              </div>
+              <!-- like and share -->
+              <div class="flex flex-row items-center">
+                <!-- like -->
+                <div class="flex flex-row bg-darkgrey px-4 py-2 rounded-3xl cursor-pointer">
+                  <img class="w-4 cursor-pointer" src="resources/likebtn.png" alt="">
+                  <h2 class="ml-2">142</h2>
+                </div>
+                <!-- share div -->
+                <div class="flex flex-row items-center bg-darkgrey px-3 py-2 rounded-3xl ml-2 cursor-pointer">
+                  <img src="resources/icons8-share-24.png" alt="">
+                  <h2 class="ml-2">Share</h2>
+                </div>
+                <!-- tripple tik -->
+                <div class="bg-darkgrey px-3 flex items-center py-3 rounded-3xl ml-2 cursor-pointer"><img class="w-5" src="resources/icons8-three-dots.png" alt=""></div>
+              </div>
+            </div>
+        </div>
+        <!-- video list section -->
+        <div class="ml-10 w-96 mr-12 cursor-pointer playlist-div">
+          <!-- <div class="flex flex-row  mb-3">
+            <img class="playlist-img" src="resources/bigBunny.png" alt="">
+            <div class="ml-4">
+              <h2 class="text-black">Elephant Dream</h2>
+              <p class="flex flex-row items-center">Creaters Club <img class="w-3 h-3 ml-1 rounded-lg" src="resources/icons8-tick-24.png" alt=""></p>
+              <p>650K views .15min</p>
+            </div>
+          </div> -->
+        </div>
+      </div>
+
+      <script src="script.js"></script>
+</body>
+</html>
