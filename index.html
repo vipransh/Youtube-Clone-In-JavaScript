@@ -46,7 +46,7 @@
           <div class="input-div flex flex-row items-center">
             <input class="w-24 md:w-96 h-6 md:h-9 border border-solid border-borderColor pl-2" type="text" placeholder="Search">
             <img class="w-6 md:w-8 h-6 md:h-9 border border-solid border-borderColor cursor-pointer p-2" src="resources/icons8-search-50.png" alt="">
-            <img class="ml-4 w-6 h-6 cursor-pointer" src="resources/icons8-microphone-24.png" alt="">
+            <img class="ml-4 w-6 h-4 md:h-6 cursor-pointer" src="resources/icons8-microphone-24.png" alt="">
           
           </div>
           
@@ -176,44 +176,43 @@
           <video class="video-player" controls controlsList=”nodownload”  width="720" height="480" poster=""> 
              </video>
 
-             
-
+             <!-- video title -->
             <h1 class="mt-4 md:text-2xl text-black video-title">Big Buck Bunny</h1>
             <!-- like dislike channel details -->
             <div class="mt-4 flex flex-row items-center justify-between">
               <div class="flex flex-row">
                 <div class="flex flex-row items-center">
-                  <img class="w-12 cursor-pointer" src="resources/icons8-rabbit-64.png" alt="">
-                  <div class="ml-4">
-                    <h1 class="flex flex-row items-center cursor-pointer text-xs md:text-lg">Creaters Club <img class="w-4 h-4 ml-2 rounded-lg" src="resources/icons8-tick-24.png" alt=""></h1>
-                    <p class="text-xs md:text-lg">142K subscribers</p>
+                  <img class="w-8 md:w-12 cursor-pointer" src="resources/icons8-rabbit-64.png" alt="">
+                  <div class="ml-2 md:ml-4 flex flex-col">
+                    <h1 class="flex flex-row items-center cursor-pointer text-xs md:text-lg">Creaters Club <img class="w-4 h-4  md:ml-2 rounded-lg" src="resources/icons8-tick-24.png" alt=""></h1>
+                    <p class="hidden md:flex text-xs md:text-lg">142K subscribers</p>
                   </div>
                 </div>
                 <!-- subscibe and bell -->
-                <div class="flex flex-row items-center ml-8 " >
+                <div class="flex flex-row items-center ml-1 md:ml-8 " >
                   <div class="bg-myRed px-3 py-1 rounded-3xl cursor-pointer subscibe-div" onclick="subscribe()"><h2 class="subscibe-text text-white text-xs md:text-lg">Subscribe</h2></div>
-                  <img class="w-6 h-6 ml-2 cursor-pointer" src="resources/bellIcon.png" alt="">
+                  <img class="w-5 md:w-6 h-5 md:h-6 ml-1 md:ml-2 cursor-pointer" src="resources/bellIcon.png" alt="">
                 </div>
-              </div>
+              </div> 
               <!-- like and share -->
               <div class="flex flex-row items-center">
                 <!-- like -->
                 <div class="flex flex-row bg-darkgrey px-4 py-2 rounded-3xl cursor-pointer">
-                  <img class="w-4 cursor-pointer" src="resources/likebtn.png" alt="">
-                  <h2 class="ml-2">142</h2>
+                  <img class="w-3 md:w-4 cursor-pointer" src="resources/likebtn.png" alt="">
+                  <h2 class="ml-1 md:ml-2 text-xs md:text-lg">142</h2>
                 </div>
                 <!-- share div -->
                 <div class="flex flex-row items-center bg-darkgrey px-3 py-2 rounded-3xl ml-2 cursor-pointer">
-                  <img src="resources/icons8-share-24.png" alt="">
-                  <h2 class="ml-2">Share</h2>
+                  <img class="w-3" src="resources/icons8-share-24.png" alt="">
+                  <h2 class="ml-1 md:ml-2 text-xs md:text-lg">Share</h2>
                 </div>
                 <!-- tripple tik -->
-                <div class="bg-darkgrey px-3 flex items-center py-3 rounded-3xl ml-2 cursor-pointer"><img class="w-5" src="resources/icons8-three-dots.png" alt=""></div>
+                <div class="bg-darkgrey px-3 hidden md:flex items-center py-3 rounded-3xl ml-2 cursor-pointer"><img class="w-5" src="resources/icons8-three-dots.png" alt=""></div>
               </div>
             </div>
         </div>
         <!-- video list section -->
-        <div class="ml-10 w-96 mr-12 cursor-pointer playlist-div">
+        <div class="ml-4 md:ml-10 md:w-96 md:mr-12 cursor-pointer playlist-div">
           <!-- <div class="flex flex-row  mb-3">
             <img class="playlist-img" src="resources/bigBunny.png" alt="">
             <div class="ml-4">
